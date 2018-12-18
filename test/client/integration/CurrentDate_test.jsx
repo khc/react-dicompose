@@ -11,9 +11,11 @@ const someString = 'lorem ipsum';
 
 describe('<CurrentDate />', () => {
   it('should render string from decorator', () => {
-    const Component = composition(mockProps({
-      currentDate: someString,
-    }));
+    const Component = composition({
+      withDate: mockProps({
+        currentDate: someString,
+      }),
+    });
     const wrapper = shallow(<Component />);
     assert(wrapper.text(), someString);
   });
