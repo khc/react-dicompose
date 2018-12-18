@@ -14,6 +14,12 @@ Component.propTypes = {
   currentDate: PropTypes.string.isRequired,
 };
 
-export const composition = $withDate => compose($withDate)(Component);
+export const composition = di => (
+  compose(
+    di.withDate,
+  )(Component)
+);
 
-export default composition(withDate);
+export default composition({
+  withDate,
+});
