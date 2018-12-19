@@ -40,6 +40,7 @@
     "build:server": "NODE_ENV=production babel src/server/index.js -d dist/",
     "build": "npm run build:server && npm run build:client",
     "lint": "eslint src/",
+    "qa": "npm run lint && npm test",
     "test": "mocha 'test/**/*_test.{js,jsx}'",
     "clean": "rm -rf dist/ tmp/"
   },

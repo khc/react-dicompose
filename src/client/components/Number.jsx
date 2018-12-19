@@ -18,10 +18,9 @@ Component.propTypes = {
   number: PropTypes.number.isRequired,
 };
 
-export const composition = dicompose({
+export const composition = dicompose(
   random,
   plusOne,
-  another: plusOne,
-})(Component);
+)(Component);
 
 export default composition();

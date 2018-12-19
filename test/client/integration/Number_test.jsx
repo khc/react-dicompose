@@ -9,12 +9,12 @@ const mockProps = (newProps = {}) => WrappedComponent => props => (
 
 describe('<Number />', () => {
   it('should render string from decorator', () => {
-    const Component = composition(({ plusOne }) => ({
-      random: mockProps({
+    const Component = composition(([, plusOne]) => [
+      mockProps({
         number: 1,
       }),
       plusOne,
-    }));
+    ]);
     const wrapper = mount(<Component />);
     assert.equal(wrapper.text(), 2);
   });
