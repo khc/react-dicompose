@@ -1,4 +1,4 @@
 react-dicompose
 ===
 
-Simple boilerplate with React and Parcel.
+React decorator composition with dependency injection.
