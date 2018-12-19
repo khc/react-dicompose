@@ -1,9 +1,9 @@
 import React from 'react';
-import CurrentDate from './components/CurrentDate';
+import Number from './components/Number';
 import './styles/styles.scss';
 
 const App = () => (
-  <CurrentDate />
+  <Number />
 );
 
 export default App;
